@@ -1,0 +1,130 @@
+#header {
+    min-height: 5%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+#header .rightArea {
+    display: flex;
+    color: whitesmoke;
+}
+
+#header .leftArea>img {
+    object-fit: cover;
+    padding-left: 14px;
+}
+
+#header .rightArea {
+    width: 260px;
+}
+
+#header .rightArea {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header .menu-area {
+    position: relative;
+    height: 18px;
+    width: 18px;
+}
+
+#bind {
+    display: none;
+}
+
+#bind:checked~.link-menu {
+    max-height: 100vh;
+    font-size: 16px;
+}
+
+#header label {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ico-menu {
+    position: relative;
+    overflow: hidden;
+}
+
+.bar {
+    top: 32px;
+    height: 2px;
+    width: 18px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    position: absolute;
+    right: 14px;
+    transition: .5s all;
+}
+
+#bind:checked~.bar:nth-child(4) {
+    transform:rotate(-45deg);
+    margin-top:3.5px;
+}
+
+#bind:checked~.bar:nth-child(5) {
+    transform:rotate(45deg);
+}
+
+#bind:checked~.bar:nth-child(3) {
+    display: none;
+}
+
+#bind:checked~.bar:nth-child(6) {
+    display: none;
+}
+
+.bar:nth-child(5) {
+    top: 28px;
+}
+
+.bar:nth-child(3) {
+    top: 20px;
+}
+
+.bar:nth-child(4) {
+    top: 24px;
+}
+
+.link-menu {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 52px;
+    width: 260px;
+    background-color: black;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+.link-menu a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #DCDCDC;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    text-align: center;
+    cursor: default;
+}
+
+.link-menu a:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .3);
+}

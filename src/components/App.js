@@ -1,15 +1,26 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+// components included intro app
+import Header from './header';
+import Main from './main';
+import Bottom from './bottom';
+import { Drawer } from './drawer';
+// styles
+import './App.css';
 
-import '../styles/App.css';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>task2-FULOGY-</h1>
-            </div>
-        );
-    }
+const App = (props) => {
+    const [shift, setShift] = useState({ shift: true });
+    return (
+        <div id='AppWrap'>
+            <Header />
+            {
+                shift
+                && <Main setShift={setShift} shift={shift} />
+                || <Drawer setShift={setShift} shift={shift} />
+            }
+            <Bottom />
+        </div>
+    )
 }
 
 export default App;

@@ -1,0 +1,28 @@
+#bottom {
+    height: 80px;
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    color:wheat;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.bottomBlock {
+    border-radius: 4px;
+    width: 10em;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 999px) {
+    #bottom{
+        height: max-content;
+    }
+
+}
